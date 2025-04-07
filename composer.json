@@ -1,5 +1,5 @@
 {
-    "name": "spatie/laravel-medialibrary",
+    "name": "roboticsexpert/laravel-medialibrary",
     "description": "Associate files with Eloquent models",
     "license": "MIT",
     "keywords": [
@@ -17,6 +17,12 @@
             "name": "Freek Van der Herten",
             "email": "freek@spatie.be",
             "homepage": "https://spatie.be",
+            "role": "Developer"
+        },
+        {
+            "name": "Mahdi Youseftabar",
+            "email": "roboticsexpert@gmail.com",
+            "homepage": "https://youseftabar.com",
             "role": "Developer"
         }
     ],
