@@ -310,7 +310,7 @@ class Filesystem
         $conversionCollection = ConversionCollection::createForMedia($media);
 
         foreach ($media->getMediaConversionNames() as $conversionName) {
-            $conversion = $conversionCollection->getByName($conversionName);
+            $conversion = $conversionCollection->getByName($conversionName, $media->collection_name);
 
             $oldFile = $conversionDirectory.$conversion->getConversionFile($mediaWithOldFileName);
             $newFile = $conversionDirectory.$conversion->getConversionFile($media);

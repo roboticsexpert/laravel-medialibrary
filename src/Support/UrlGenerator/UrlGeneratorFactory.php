@@ -25,7 +25,7 @@ class UrlGeneratorFactory
             ->setPathGenerator($pathGenerator);
 
         if ($conversionName !== '') {
-            $conversion = ConversionCollection::createForMedia($media)->getByName($conversionName);
+            $conversion = ConversionCollection::createForMedia($media)->getByName($conversionName, $media->collection_name);
 
             $urlGenerator->setConversion($conversion);
         }

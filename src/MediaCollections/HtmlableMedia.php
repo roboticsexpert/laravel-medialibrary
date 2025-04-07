@@ -77,7 +77,7 @@ class HtmlableMedia implements \Stringable, Htmlable
         $loadingAttributeValue = config('media-library.default_loading_attribute_value');
 
         if ($this->conversionName !== '') {
-            $conversionObject = ConversionCollection::createForMedia($this->media)->getByName($this->conversionName);
+            $conversionObject = ConversionCollection::createForMedia($this->media)->getByName($this->conversionName, $this->media->collection_name);
 
             $loadingAttributeValue = $conversionObject->getLoadingAttributeValue();
         }
