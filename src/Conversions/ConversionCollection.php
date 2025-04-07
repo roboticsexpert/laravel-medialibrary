@@ -41,7 +41,7 @@ class ConversionCollection extends Collection
 
     public function getByName(string $name, string $collectionName = ''): Conversion
     {
-        $conversion = $this->first(fn(Conversion $conversion) => $conversion->getName() === $name && ($collectionName == '' || $conversion->shouldBePerformedOn($collectionName)));
+        $conversion = $this->first(fn (Conversion $conversion) => $conversion->getName() === $name && ($collectionName == '' || $conversion->shouldBePerformedOn($collectionName)));
 
         if (! $conversion) {
             throw InvalidConversion::unknownName($name);
